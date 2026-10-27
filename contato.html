@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <a href="#conteudo-principal">Pular para o conteúdo principal</a>
     <header>
         <h1>Patas & Bigodes</h1>
         <nav>
@@ -23,12 +24,10 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Requisito: Informações de Endereço, Mapa e Horários -->
+    <main id="conteudo-principal">
         <section>
             <h2>Informações de Contato e Localização</h2>
 
-            <!-- Endereço fictício no elemento <address> com links mailto e tel -->
             <address>
                 <p><strong>Patas & Bigodes — Sede Sampaio</strong></p>
                 <p>Rua dos Gatinhos, 123 — Bairro Aconchego, São Paulo - SP</p>
@@ -36,14 +35,13 @@
                 <p>Telefone / WhatsApp: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
             </address>
 
-            <!-- Link externo para serviço de mapas em nova aba com rel adequado -->
             <p>
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
                     Ver nossa localização no Google Maps (abre em nova aba)
                 </a>
             </p>
 
-            <!-- Horário de atendimento em lista de definição (<dl>) -->
+
             <h3>Horário de Atendimento</h3>
             <dl>
                 <dt>Segunda a Sexta-feira</dt>
@@ -57,7 +55,6 @@
             </dl>
         </section>
 
-        <!-- Requisito: Formulário de mensagem específico de contato -->
         <section>
             <h2>Envie uma Mensagem</h2>
             <p>Tem alguma dúvida rápida? Preencha os campos abaixo para falar com nossa equipe.</p>
@@ -76,7 +73,6 @@
                         <input type="email" id="email-contato" name="email_contato" placeholder="exemplo@email.com" required>
                     </div>
 
-                    <!-- Assunto em lista de seleção -->
                     <div>
                         <label for="assunto">Assunto:</label>
                         <select id="assunto" name="assunto" required>
@@ -87,7 +83,6 @@
                         </select>
                     </div>
 
-                    <!-- Mensagem obrigatória -->
                     <div>
                         <label for="mensagem">Mensagem (obrigatória):</label>
                         <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui a sua mensagem..." required></textarea>
