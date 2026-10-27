@@ -1,38 +1,111 @@
-<!--Horários de visita, morada fictícia e o contato do abrigo-->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Esta página mostra os Horários de visita, o endereço do local e o contato do abrigo">
+        content="Entre em contato com a equipe do Patas & Bigodes para tirar dúvidas ou agendar uma visita.">
+    <title>Contato — Patas & Bigodes</title>
 </head>
-<title> Patas & Bigodes</title>
-</head>
-<header>
-    <h1>Patas & Bigodes</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="dados.html">Dados</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="contato.html" aria-current="page">Contato</a></li>
-        </ul>
-    </nav>
-</header>
 
 <body>
-    <main>
+    <header>
+        <h1>Patas & Bigodes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="contato.html" aria-current="page">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <!-- Requisito: Informações de Endereço, Mapa e Horários -->
+        <section>
+            <h2>Informações de Contato e Localização</h2>
+
+            <!-- Endereço fictício no elemento <address> com links mailto e tel -->
+            <address>
+                <p><strong>Patas & Bigodes — Sede Sampaio</strong></p>
+                <p>Rua dos Gatinhos, 123 — Bairro Aconchego, São Paulo - SP</p>
+                <p>E-mail: <a href="mailto:contato@patasebigodes.org.br">contato@patasebigodes.org.br</a></p>
+                <p>Telefone / WhatsApp: <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+            </address>
+
+            <!-- Link externo para serviço de mapas em nova aba com rel adequado -->
+            <p>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+                    Ver nossa localização no Google Maps (abre em nova aba)
+                </a>
+            </p>
+
+            <!-- Horário de atendimento em lista de definição (<dl>) -->
+            <h3>Horário de Atendimento</h3>
+            <dl>
+                <dt>Segunda a Sexta-feira</dt>
+                <dd>08:00 às 18:00</dd>
+
+                <dt>Sábados e Feriados</dt>
+                <dd>09:00 às 13:00</dd>
+
+                <dt>Domingos</dt>
+                <dd>Fechado para visitas externas</dd>
+            </dl>
+        </section>
+
+        <!-- Requisito: Formulário de mensagem específico de contato -->
+        <section>
+            <h2>Envie uma Mensagem</h2>
+            <p>Tem alguma dúvida rápida? Preencha os campos abaixo para falar com nossa equipe.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Formulário de Contato</legend>
+
+                    <div>
+                        <label for="nome-contato">Nome:</label>
+                        <input type="text" id="nome-contato" name="nome_contato" required>
+                    </div>
+
+                    <div>
+                        <label for="email-contato">E-mail:</label>
+                        <input type="email" id="email-contato" name="email_contato" placeholder="exemplo@email.com" required>
+                    </div>
+
+                    <!-- Assunto em lista de seleção -->
+                    <div>
+                        <label for="assunto">Assunto:</label>
+                        <select id="assunto" name="assunto" required>
+                            <option value="">Selecione um assunto...</option>
+                            <option value="duvida">Dúvidas Gerais</option>
+                            <option value="visita">Agendamento de Visita</option>
+                            <option value="parceria">Parcerias e Imprensa</option>
+                        </select>
+                    </div>
+
+                    <!-- Mensagem obrigatória -->
+                    <div>
+                        <label for="mensagem">Mensagem (obrigatória):</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </section>
     </main>
+
     <footer>
         <p><strong><em>Turma:</em></strong> DSM3 2025</p>
-        <p><strong><em>Aluno</em></strong> Murilo Augusto Amaral Sampaio</p>
+        <p><strong><em>Aluno:</em></strong> Murilo Augusto Amaral Sampaio</p>
         <p><strong><em>2026</em></strong></p>
     </footer>
-
 </body>
 
 </html>

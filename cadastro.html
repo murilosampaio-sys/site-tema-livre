@@ -1,38 +1,137 @@
-<!--Formulário de candidatura a voluntário ou para intenção de adoção.-->
+<!-- Formulario de contato para duvidas, adocoes e voluntariado do Patas & Bigodes. -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Nesta página é destinada para aqueles que querem se voluntariar à o trabalho de cuidados dos gatinhos e para aqueles que tem intenção de adoção.">
+        content="Entre em contato com a equipe do Patas & Bigodes para tirar dúvidas, adotar ou voluntariar-se.">
+    <title>Contato — Patas & Bigodes</title>
 </head>
-<title> Patas & Bigodes</title>
-</head>
-<header>
-    <h1>Patas & Bigodes</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="dados.html">Dados</a></li>
-            <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-</header>
 
 <body>
-    <main>
+    <header>
+        <h1>Patas & Bigodes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="cadastro.html" aria-current="page"></a>Cadastro</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section>
+            <h2>Fale Conosco</h2>
+            <p>Preencha o formulário abaixo para tirar dúvidas sobre adoção responsável, oferecer apoio voluntário ou
+                mandar uma mensagem para a nossa equipe.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="emaildoewertonfofo@email.com" required>
+                    </div>
+
+                    <div>
+                        <label for="telefone">Número de Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Como prefere ser contactado? (Obrigatório)</legend>
+
+                    <div>
+                        <input type="radio" id="contato-email" name="forma_contato" value="email" required>
+                        <label for="contato-email">Por E-mail</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="contato-telefone" name="forma_contato" value="telefone">
+                        <label for="contato-telefone">Por Ligação Telefônica</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="contato-whatsapp" name="forma_contato" value="whatsapp">
+                        <label for="contato-whatsapp">Por WhatsApp</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesse de Acolher um Gatinho</legend>
+
+                    <div>
+                        <label for="tipo-pet">Qual tipo de gatinho procura?</label>
+                        <select id="tipo-pet" name="tipo-pet" required>
+                            <option value="">Selecione um tipo...</option>
+                            <option value="gato gordinho">Gato gordinho</option>
+                            <option value="gatinho filhote">Gatinho Filhote</option>
+                            <option value="gato normal">Gatinho normal</option>
+                        </select>
+                    </div>
+
+                    <figure>
+                        <figcaption>Exemplos dos gatinhos disponíveis:</figcaption>
+                        <img src="imagens-pagina-contato/gato-gordo.jpg" alt="Exemplo de gatinho gordinho">
+                        <img src="imagens-pagina-contato/gatinho-filhotinho-coitado.jpg"
+                            alt="Exemplo de gatinho filhote">
+                        <img src="imagens-pagina-contato/gato-normal.jpg" alt="Exemplo de gatinho normal">
+                    </figure>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesse de Doar Ração para a Instituição</legend>
+                    <div>
+                        <label for="doacao">Quantidade em kg (marcar 0 se não quiser doar):</label>
+                        <input type="number" id="doacao" name="doacao" step="0.1" placeholder="0.1 kg" min="0">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferências de Notificação e Termos</legend>
+
+                    <div>
+                        <input type="checkbox" id="notificacao-email" name="notificacoes" value="email">
+                        <label for="notificacao-email">Desejo receber notícias da ONG por e-mail</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="notificacao-eventos" name="notificacoes" value="eventos">
+                        <label for="notificacao-eventos">Desejo ser avisado sobre feiras de adoção presenciais</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="aceite-termos" name="aceite_termos" required>
+                        <label for="aceite-termos">Declaro que li e aceito os termos de responsabilidade e
+                            adoção.</label>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="submit">Enviar Formulário</button>
+                </div>
+            </form>
+        </section>
     </main>
+
     <footer>
         <p><strong><em>Turma:</em></strong> DSM3 2025</p>
-        <p><strong><em>Aluno</em></strong> Murilo Augusto Amaral Sampaio</p>
+        <p><strong><em>Aluno:</em></strong> Murilo Augusto Amaral Sampaio</p>
         <p><strong><em>2026</em></strong></p>
     </footer>
-
 </body>
 
 </html>
